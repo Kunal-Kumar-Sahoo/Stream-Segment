@@ -1,0 +1,6 @@
+fastapi==0.103.0
+pillow==10.0.0
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
+python-multipart==0.0.6
+aiofiles==23.2.1
