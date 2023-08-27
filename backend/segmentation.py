@@ -42,6 +42,7 @@ def get_segments(model, binary_image, max_size=512):
         2 ** 25 - 1, 2 ** 15 - 1, 2 ** 21 - 1
     ])
     colors = torch.as_tensor([i for i in range(21)])[:, None] * palette
+    colors = (colors % 255).numpy().astype('uint8')
 
     r = Image.fromarray(output_predictions.byte().cpu().numpy()).resize(
         input_image.size
